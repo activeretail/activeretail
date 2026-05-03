@@ -8,688 +8,293 @@
   <meta name="keywords" content="Google Ads Agency, Shopify Development, WordPress Development, Ecommerce Solutions, POS Software, OMS Software, Digital Marketing Agency, Facebook Ads Expert, Website Development Company" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://activeretail.com/" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://activeretail.com/" />
   <meta property="og:title" content="ActiveRetail – Software & Agency Solutions" />
   <meta property="og:description" content="Premium software house and digital marketing agency. Google Ads, Shopify, WordPress, OMS/POS, and more." />
-  <meta property="og:image" content="https://activeretail.com/og-image.jpg" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ActiveRetail – Software & Agency Solutions" />
-  <meta name="twitter:description" content="Premium software house and digital marketing agency. Google Ads, Shopify, WordPress, OMS/POS, and more." />
-  <meta name="twitter:image" content="https://activeretail.com/twitter-image.jpg" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"ActiveRetail","description":"Premium software house and digital marketing agency","url":"https://activeretail.com","telephone":"+92-300-0000000","email":"hello@activeretail.com","address":{"@type":"PostalAddress","addressLocality":"Karachi","addressRegion":"Sindh","addressCountry":"PK"}}</script>
 
-  <!-- Schema Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "ActiveRetail",
-    "description": "Premium software house and digital marketing agency specializing in Google Ads, Shopify development, WordPress development, OMS/POS solutions, and e-commerce.",
-    "url": "https://activeretail.com",
-    "telephone": "+92-300-0000000",
-    "email": "hello@activeretail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Your Office Address",
-      "addressLocality": "Karachi",
-      "addressRegion": "Sindh",
-      "postalCode": "74000",
-      "addressCountry": "PK"
-    },
-    "sameAs": [
-      "https://facebook.com/activeretail",
-      "https://instagram.com/activeretail",
-      "https://linkedin.com/company/activeretail"
-    ]
-  }
-  </script>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg: #04050a;
-      --bg-2: #070c18;
-      --bg-card: #0d1526;
-      --bg-card-hover: #111d36;
-      --accent: #0ea5e9;
-      --accent-2: #6366f1;
-      --accent-grad: linear-gradient(135deg, #0ea5e9, #6366f1);
-      --text: #e8edf8;
-      --text-muted: #8892a4;
-      --border: rgba(255,255,255,0.07);
-      --glow: 0 0 60px rgba(14,165,233,0.15);
+      --primary:        #0B2C5F;
+      --primary-dark:   #071d40;
+      --primary-mid:    #0d3570;
+      --primary-light:  #1a4a8a;
+      --secondary:      #12B8C6;
+      --secondary-dark: #0d9aaa;
+      --secondary-light:#3fd0db;
+      --grad:           linear-gradient(135deg, #0B2C5F 0%, #12B8C6 100%);
+      --grad-r:         linear-gradient(135deg, #12B8C6 0%, #0B2C5F 100%);
+      --bg:             #ffffff;
+      --bg-2:           #f3f7fc;
+      --bg-3:           #e8f5f7;
+      --card:           #ffffff;
+      --text:           #0d1f3c;
+      --text-2:         #3d5272;
+      --text-muted:     #7a92b0;
+      --border:         #dde6f0;
+      --border-2:       #c5d8e8;
+      --shadow-sm:      0 2px 12px rgba(11,44,95,0.07);
+      --shadow-md:      0 8px 32px rgba(11,44,95,0.11);
+      --shadow-lg:      0 20px 60px rgba(11,44,95,0.14);
+      --shadow-teal:    0 8px 32px rgba(18,184,198,0.28);
     }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3,h4,h5{line-height:1.15;}
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;display:block;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:var(--bg-2);}
+    ::-webkit-scrollbar-thumb{background:var(--secondary);border-radius:3px;}
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ── NAVBAR ── */
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:box-shadow .3s;}
+    nav.scrolled{box-shadow:var(--shadow-md);}
+    .nav-logo{font-family:'Fraunces',serif;font-size:1.55rem;font-weight:900;color:var(--primary);letter-spacing:-.5px;display:flex;align-items:center;}
+    .nav-logo .teal{color:var(--secondary);}
+    .nav-links{display:flex;gap:2rem;list-style:none;font-size:.875rem;font-weight:600;color:var(--text-2);}
+    .nav-links a{transition:color .2s;}
+    .nav-links a:hover{color:var(--primary);}
+    .nav-cta{background:var(--primary);color:#fff;font-weight:700;font-size:.875rem;padding:.55rem 1.35rem;border-radius:8px;transition:background .2s,transform .2s,box-shadow .2s;}
+    .nav-cta:hover{background:var(--primary-light);transform:translateY(-1px);box-shadow:var(--shadow-md);}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+    .hamburger span{width:24px;height:2px;background:var(--primary);border-radius:2px;transition:all .3s;}
+    .mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;z-index:999;background:#fff;border-bottom:3px solid var(--secondary);padding:1.5rem 5%;box-shadow:var(--shadow-lg);}
+    .mobile-menu.open{display:block;}
+    .mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:.85rem;}
+    .mobile-menu a{font-size:1rem;font-weight:600;color:var(--text-2);display:block;padding:.2rem 0;}
+    .mobile-menu a:hover{color:var(--primary);}
+    .mobile-menu .m-cta{margin-top:1.25rem;display:block;text-align:center;background:var(--primary);color:#fff;padding:.85rem;border-radius:10px;font-weight:700;font-size:1rem;}
 
-    html { scroll-behavior: smooth; font-size: 16px; }
+    /* ── BUTTONS ── */
+    .btn-primary{display:inline-flex;align-items:center;gap:.4rem;background:var(--primary);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;padding:.85rem 2rem;border-radius:10px;border:none;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(11,44,95,.22);}
+    .btn-primary:hover{background:var(--primary-light);transform:translateY(-2px);box-shadow:var(--shadow-lg);}
+    .btn-secondary{display:inline-flex;align-items:center;gap:.4rem;background:var(--secondary);color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;padding:.85rem 2rem;border-radius:10px;border:none;cursor:pointer;transition:background .2s,transform .2s;box-shadow:var(--shadow-teal);}
+    .btn-secondary:hover{background:var(--secondary-dark);transform:translateY(-2px);}
+    .btn-outline{display:inline-flex;align-items:center;gap:.4rem;background:transparent;color:var(--primary);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.95rem;padding:.85rem 2rem;border-radius:10px;border:2px solid var(--primary);cursor:pointer;transition:background .2s,color .2s,transform .2s;}
+    .btn-outline:hover{background:var(--primary);color:#fff;transform:translateY(-2px);}
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
+    /* ── SECTION ── */
+    section{position:relative;padding:96px 5%;}
+    .section-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.73rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--secondary);margin-bottom:1rem;}
+    .section-tag::before{content:'';width:20px;height:3px;border-radius:2px;background:var(--secondary);display:inline-block;}
+    .section-title{font-family:'Fraunces',serif;font-size:clamp(1.9rem,3.8vw,2.9rem);font-weight:800;letter-spacing:-.5px;color:var(--primary);}
+    .section-title .accent{color:var(--secondary);}
+    .section-sub{margin-top:1rem;color:var(--text-2);font-size:1.05rem;max-width:560px;line-height:1.75;}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;}
+    .reveal.visible{opacity:1;transform:none;}
 
-    h1, h2, h3, h4, h5 {
-      font-family: 'Syne', sans-serif;
-      line-height: 1.15;
-    }
+    /* ── HERO ── */
+    #home{min-height:100vh;padding:130px 5% 80px;background:var(--bg);display:flex;align-items:center;overflow:hidden;}
+    .hero-wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;width:100%;}
+    .hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:var(--bg-3);border:1.5px solid rgba(18,184,198,.4);color:var(--secondary-dark);font-size:.77rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:.4rem 1rem;border-radius:100px;margin-bottom:1.75rem;animation:fadeUp .5s ease both;}
+    .hero-badge .blink{width:7px;height:7px;border-radius:50%;background:var(--secondary);animation:blink 1.8s ease infinite;display:inline-block;}
+    @keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+    .hero-title{font-family:'Fraunces',serif;font-size:clamp(2.6rem,5vw,4.5rem);font-weight:900;color:var(--primary);letter-spacing:-1.5px;line-height:1.05;animation:fadeUp .5s .08s ease both;}
+    .hero-title .teal{color:var(--secondary);}
+    .hero-title .ul{position:relative;display:inline-block;}
+    .hero-title .ul::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:4px;border-radius:2px;background:var(--secondary);}
+    .hero-sub{margin-top:1.75rem;font-size:1.1rem;color:var(--text-2);max-width:520px;line-height:1.75;animation:fadeUp .5s .16s ease both;}
+    .hero-btns{margin-top:2.5rem;display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .5s .24s ease both;}
+    .hero-stats{margin-top:3.5rem;display:flex;gap:2.5rem;flex-wrap:wrap;padding-top:2.5rem;border-top:1px solid var(--border);animation:fadeUp .5s .32s ease both;}
+    .stat-num{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:900;color:var(--primary);line-height:1;}
+    .stat-num .s{color:var(--secondary);}
+    .stat-label{font-size:.77rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.07em;margin-top:.3rem;}
 
-    a { color: inherit; text-decoration: none; }
+    /* hero visual */
+    .hero-visual{animation:fadeUp .5s .1s ease both;position:relative;}
+    .h-card-main{background:var(--primary);color:#fff;border-radius:22px;padding:2rem;box-shadow:0 24px 80px rgba(11,44,95,.25);position:relative;overflow:hidden;}
+    .h-card-main::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(18,184,198,.12);}
+    .h-badge-live{display:inline-flex;align-items:center;gap:.4rem;background:rgba(18,184,198,.15);border:1px solid rgba(18,184,198,.3);color:var(--secondary-light);font-size:.73rem;font-weight:700;padding:.3rem .8rem;border-radius:100px;margin-bottom:1rem;}
+    .h-badge-live .live-dot{width:6px;height:6px;border-radius:50%;background:var(--secondary);animation:blink 1.5s ease infinite;}
+    .kpi-label{font-size:.72rem;font-weight:700;opacity:.6;letter-spacing:.08em;text-transform:uppercase;}
+    .kpi-val{font-family:'Fraunces',serif;font-size:2.6rem;font-weight:900;line-height:1;margin-top:.2rem;}
+    .kpi-val .teal{color:var(--secondary);}
+    .kpi-sub{font-size:.8rem;opacity:.6;margin-top:.2rem;}
+    .bar-row{display:flex;flex-direction:column;gap:.65rem;margin-top:1.25rem;}
+    .bar-label{display:flex;justify-content:space-between;font-size:.73rem;opacity:.72;margin-bottom:.3rem;}
+    .bar-track{height:6px;background:rgba(255,255,255,.12);border-radius:3px;}
+    .bar-fill{height:6px;border-radius:3px;background:var(--secondary);animation:barGrow 1.6s ease forwards;}
+    @keyframes barGrow{from{width:0}}
+    .h-float-card{position:absolute;bottom:-18px;right:-18px;background:var(--secondary);color:#fff;border-radius:16px;padding:1.1rem 1.4rem;box-shadow:var(--shadow-teal);animation:floatY 3.5s ease-in-out infinite;}
+    @keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+    .h-float-card strong{font-family:'Fraunces',serif;font-size:1.8rem;display:block;font-weight:900;}
+    .h-float-card span{font-size:.72rem;font-weight:700;opacity:.85;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 
-    img { max-width: 100%; display: block; }
+    /* ── CLIENTS ── */
+    .clients-strip{background:var(--bg-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem 0;overflow:hidden;}
+    .clients-label{text-align:center;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:1rem;}
+    .clients-inner{display:flex;gap:3.5rem;align-items:center;animation:marquee 25s linear infinite;width:max-content;}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .client-name{font-size:.88rem;font-weight:700;color:var(--primary);opacity:.35;white-space:nowrap;transition:opacity .2s;}
+    .client-name:hover{opacity:.8;}
 
-    /* ─── NOISE OVERLAY ─── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
-      opacity: 0.4;
-    }
+    /* ── ABOUT ── */
+    #about{background:var(--bg-2);}
+    .about-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+    .about-img-box{background:var(--primary);border-radius:24px;padding:2.5rem;box-shadow:0 24px 80px rgba(11,44,95,.2);position:relative;overflow:hidden;}
+    .about-img-box::before{content:'';position:absolute;top:-50px;right:-50px;width:180px;height:180px;border-radius:50%;background:rgba(18,184,198,.12);}
+    .about-img-box h3{font-family:'Fraunces',serif;font-size:1.4rem;color:#fff;font-weight:800;margin-bottom:.75rem;position:relative;}
+    .about-img-box p{color:rgba(255,255,255,.68);font-size:.9rem;line-height:1.72;position:relative;}
+    .about-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.5rem;position:relative;}
+    .chip{background:rgba(18,184,198,.15);border:1px solid rgba(18,184,198,.35);color:var(--secondary-light);font-size:.73rem;font-weight:700;padding:.35rem .9rem;border-radius:100px;}
+    .about-float{position:absolute;bottom:-20px;left:24px;background:var(--secondary);color:#fff;border-radius:14px;padding:1rem 1.25rem;box-shadow:var(--shadow-teal);}
+    .about-float strong{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:900;display:block;}
+    .about-float span{font-size:.72rem;font-weight:700;opacity:.85;}
+    .about-text ul{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:.85rem;}
+    .about-text ul li{display:flex;gap:.75rem;align-items:flex-start;font-size:.95rem;color:var(--text-2);}
+    .li-icon{width:22px;height:22px;border-radius:50%;background:var(--secondary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.6rem;flex-shrink:0;margin-top:2px;font-weight:900;}
 
-    /* ─── GRID BG ─── */
-    .grid-bg {
-      position: absolute; inset: 0; pointer-events: none;
-      background-image:
-        linear-gradient(rgba(14,165,233,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(14,165,233,0.04) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
+    /* ── SERVICES ── */
+    #services{background:var(--bg);}
+    .services-grid{margin-top:4rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:1.5rem;}
+    .service-card{background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:2rem;transition:transform .3s,border-color .3s,box-shadow .3s;cursor:default;position:relative;overflow:hidden;}
+    .service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .35s ease;}
+    .service-card:hover{transform:translateY(-6px);border-color:var(--secondary);box-shadow:var(--shadow-lg);}
+    .service-card:hover::after{transform:scaleX(1);}
+    .service-icon{width:54px;height:54px;border-radius:14px;background:var(--bg-3);border:1.5px solid var(--border-2);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.25rem;transition:transform .3s;}
+    .service-card:hover .service-icon{transform:scale(1.08);}
+    .service-card h3{font-size:1.05rem;font-weight:700;color:var(--primary);margin-bottom:.6rem;}
+    .service-card p{color:var(--text-2);font-size:.875rem;line-height:1.68;}
+    .s-cta{display:inline-flex;align-items:center;gap:.3rem;margin-top:1.25rem;color:var(--secondary-dark);font-size:.82rem;font-weight:700;transition:gap .2s,color .2s;}
+    .service-card:hover .s-cta{gap:.55rem;color:var(--secondary);}
 
-    /* ─── NAVBAR ─── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      padding: 0 5%;
-      height: 70px;
-      display: flex; align-items: center; justify-content: space-between;
-      background: rgba(4,5,10,0.85);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      transition: all 0.3s ease;
-    }
-    nav.scrolled { background: rgba(4,5,10,0.97); }
+    /* ── WHY ── */
+    #why{background:var(--primary);}
+    #why .section-tag{color:var(--secondary);}
+    #why .section-title{color:#fff;}
+    #why .section-title .accent{color:var(--secondary);}
+    #why .section-sub{color:rgba(255,255,255,.62);}
+    .why-grid{margin-top:4rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.5rem;}
+    .why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:1.75rem;transition:background .3s,border-color .3s,transform .3s;}
+    .why-card:hover{background:rgba(18,184,198,.1);border-color:rgba(18,184,198,.4);transform:translateY(-4px);}
+    .why-num{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:900;color:var(--secondary);line-height:1;}
+    .why-card h3{font-size:1rem;font-weight:700;color:#fff;margin:.5rem 0;}
+    .why-card p{font-size:.875rem;color:rgba(255,255,255,.58);line-height:1.65;}
 
-    .nav-logo {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.5rem; font-weight: 800;
-      background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      letter-spacing: -0.5px;
-    }
-    .nav-logo span { -webkit-text-fill-color: var(--text); }
+    /* ── PORTFOLIO ── */
+    #portfolio{background:var(--bg-2);}
+    .portfolio-grid{margin-top:4rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem;}
+    .portfolio-card{border-radius:20px;overflow:hidden;background:var(--card);border:1.5px solid var(--border);box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s;}
+    .portfolio-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+    .portfolio-img{height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem;background:linear-gradient(135deg,var(--primary) 0%,#1a4a8a 100%);position:relative;overflow:hidden;}
+    .portfolio-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(18,184,198,.2) 0%,transparent 60%);}
+    .portfolio-body{padding:1.5rem;}
+    .portfolio-tag{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--secondary-dark);margin-bottom:.5rem;display:block;}
+    .portfolio-body h3{font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:.4rem;}
+    .portfolio-body p{font-size:.855rem;color:var(--text-2);line-height:1.65;}
 
-    .nav-links {
-      display: flex; gap: 2rem; list-style: none;
-      font-size: 0.875rem; font-weight: 500; color: var(--text-muted);
-    }
-    .nav-links a:hover { color: var(--text); }
+    /* ── PROCESS ── */
+    #process{background:var(--bg);}
+    .process-steps{margin-top:4rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:2rem;}
+    .process-step{text-align:center;}
+    .step-circle{width:64px;height:64px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-size:1.2rem;font-weight:900;color:#fff;margin:0 auto 1.1rem;box-shadow:0 8px 24px rgba(11,44,95,.2);}
+    .process-step h3{font-size:.95rem;font-weight:700;color:var(--primary);margin-bottom:.4rem;}
+    .process-step p{font-size:.835rem;color:var(--text-2);line-height:1.65;}
 
-    .nav-cta {
-      background: var(--accent-grad);
-      color: #fff; font-weight: 600; font-size: 0.875rem;
-      padding: 0.5rem 1.25rem; border-radius: 8px;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+    /* ── CTA BANNER ── */
+    .cta-banner{margin:0 5%;background:var(--grad);border-radius:24px;padding:4rem 3rem;text-align:center;position:relative;overflow:hidden;}
+    .cta-banner::before{content:'';position:absolute;width:350px;height:350px;border-radius:50%;background:rgba(255,255,255,.07);top:-80px;right:-80px;pointer-events:none;}
+    .cta-banner::after{content:'';position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,.05);bottom:-60px;left:-40px;pointer-events:none;}
+    .cta-banner h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,4vw,2.7rem);color:#fff;font-weight:900;margin-bottom:.75rem;position:relative;z-index:1;}
+    .cta-banner p{color:rgba(255,255,255,.82);font-size:1.05rem;margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;position:relative;z-index:1;}
+    .btn-white{background:#fff;color:var(--primary);font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1rem;padding:.85rem 2.25rem;border-radius:10px;border:none;cursor:pointer;transition:transform .2s,box-shadow .2s;display:inline-block;position:relative;z-index:1;}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.18);}
 
-    .hamburger {
-      display: none; flex-direction: column; gap: 5px; cursor: pointer;
-      background: none; border: none; padding: 4px;
-    }
-    .hamburger span {
-      width: 24px; height: 2px; background: var(--text);
-      border-radius: 2px; transition: all 0.3s ease;
-    }
+    /* ── TESTIMONIALS ── */
+    #testimonials{background:var(--bg-2);}
+    .testi-grid{margin-top:4rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
+    .testi-card{background:var(--card);border:1.5px solid var(--border);border-radius:20px;padding:2rem;box-shadow:var(--shadow-sm);transition:transform .3s,box-shadow .3s;position:relative;}
+    .testi-card::before{content:'"';font-family:'Fraunces',serif;font-size:5rem;font-weight:900;color:var(--secondary);opacity:.1;line-height:1;position:absolute;top:.5rem;right:1.5rem;pointer-events:none;}
+    .testi-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+    .stars{color:#f59e0b;font-size:.85rem;letter-spacing:2px;margin-bottom:1rem;}
+    .testi-text{font-size:.93rem;color:var(--text-2);line-height:1.75;font-style:italic;}
+    .testi-author{margin-top:1.5rem;display:flex;align-items:center;gap:.75rem;}
+    .testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--grad);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex-shrink:0;}
+    .testi-name{font-size:.9rem;font-weight:700;color:var(--primary);}
+    .testi-role{font-size:.77rem;color:var(--text-muted);}
 
-    .mobile-menu {
-      display: none; position: fixed; top: 70px; left: 0; right: 0; z-index: 999;
-      background: rgba(4,5,10,0.98); border-bottom: 1px solid var(--border);
-      padding: 1.5rem 5%;
-    }
-    .mobile-menu.open { display: block; }
-    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
-    .mobile-menu a { font-size: 1rem; font-weight: 500; color: var(--text-muted); display: block; padding: 0.25rem 0; }
-    .mobile-menu a:hover { color: var(--text); }
-    .mobile-menu .m-cta {
-      margin-top: 1rem;
-      display: block; text-align: center;
-      background: var(--accent-grad); color: #fff;
-      padding: 0.75rem; border-radius: 8px; font-weight: 600;
-    }
+    /* ── FAQ ── */
+    #faq{background:var(--bg);}
+    .faq-list{margin-top:4rem;max-width:820px;display:flex;flex-direction:column;gap:1rem;}
+    .faq-item{background:var(--card);border:1.5px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);transition:border-color .2s;}
+    .faq-item.open{border-color:var(--secondary);}
+    .faq-q{width:100%;text-align:left;background:none;border:none;color:var(--primary);font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:700;padding:1.2rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+    .faq-q:hover{color:var(--secondary-dark);}
+    .faq-icon{font-size:1.3rem;transition:transform .3s;color:var(--secondary);flex-shrink:0;}
+    .faq-item.open .faq-icon{transform:rotate(45deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease;padding:0 1.5rem;font-size:.9rem;color:var(--text-2);line-height:1.75;}
+    .faq-item.open .faq-a{max-height:300px;padding:0 1.5rem 1.25rem;}
 
-    /* ─── HERO ─── */
-    #home {
-      min-height: 100vh;
-      padding: 120px 5% 80px;
-      display: flex; align-items: center;
-      position: relative; overflow: hidden;
-    }
+    /* ── CONTACT ── */
+    #contact{background:var(--bg-2);}
+    .contact-inner{display:grid;grid-template-columns:1fr 1.5fr;gap:5rem;margin-top:4rem;align-items:start;}
+    .contact-info h3{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--primary);font-weight:800;margin-bottom:1.75rem;}
+    .contact-detail{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.25rem;}
+    .c-icon{width:42px;height:42px;border-radius:11px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+    .contact-detail strong{display:block;font-size:.9rem;color:var(--primary);font-weight:700;margin-bottom:.1rem;}
+    .contact-detail span{font-size:.875rem;color:var(--text-2);}
+    .social-row{display:flex;gap:.6rem;margin-top:2rem;}
+    .social-btn{width:40px;height:40px;border-radius:10px;background:var(--card);border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;color:var(--primary);transition:background .2s,border-color .2s,color .2s;}
+    .social-btn:hover{background:var(--primary);border-color:var(--primary);color:#fff;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+    .form-group{margin-bottom:1rem;}
+    .form-group label{display:block;font-size:.74rem;font-weight:800;color:var(--primary);margin-bottom:.4rem;letter-spacing:.05em;text-transform:uppercase;}
+    .form-group input,.form-group select,.form-group textarea{width:100%;background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:.78rem 1rem;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:.9rem;outline:none;transition:border-color .2s,box-shadow .2s;}
+    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--secondary);box-shadow:0 0 0 3px rgba(18,184,198,.15);}
+    .form-group textarea{resize:vertical;min-height:120px;}
 
-    .hero-orb-1 {
-      position: absolute; width: 600px; height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%);
-      top: -100px; right: -100px; pointer-events: none;
-      animation: floatOrb 8s ease-in-out infinite;
-    }
-    .hero-orb-2 {
-      position: absolute; width: 400px; height: 400px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(14,165,233,0.2) 0%, transparent 70%);
-      bottom: 0; left: -100px; pointer-events: none;
-      animation: floatOrb 10s ease-in-out infinite reverse;
-    }
-    @keyframes floatOrb {
-      0%, 100% { transform: translateY(0px) scale(1); }
-      50% { transform: translateY(-30px) scale(1.05); }
-    }
+    /* ── FOOTER ── */
+    footer{background:var(--primary);color:#fff;padding:4rem 5% 2rem;}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;}
+    .footer-logo{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:900;color:#fff;margin-bottom:1rem;display:flex;align-items:center;}
+    .footer-logo .teal{color:var(--secondary);}
+    .footer-brand p{font-size:.875rem;color:rgba(255,255,255,.5);line-height:1.7;max-width:270px;}
+    .footer-col h4{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1.1rem;}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+    .footer-col li,.footer-col a{font-size:.875rem;color:rgba(255,255,255,.62);transition:color .2s;}
+    .footer-col a:hover{color:#fff;}
+    .footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.8rem;color:rgba(255,255,255,.4);}
 
-    .hero-content { position: relative; z-index: 2; max-width: 780px; }
+    /* ── FLOATING ── */
+    .whatsapp-float{position:fixed;bottom:24px;right:24px;z-index:999;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;font-size:1.6rem;box-shadow:0 8px 28px rgba(37,211,102,.4);transition:transform .2s,box-shadow .2s;}
+    .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 14px 40px rgba(37,211,102,.55);}
+    .mobile-sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:998;background:var(--primary);padding:1rem 1.5rem;text-align:center;border-top:3px solid var(--secondary);}
+    .mobile-sticky-cta a{color:#fff;font-weight:700;font-size:1rem;}
 
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(14,165,233,0.1); border: 1px solid rgba(14,165,233,0.25);
-      color: var(--accent); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em;
-      padding: 0.35rem 1rem; border-radius: 100px;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.6s ease both;
-    }
-    .hero-badge::before { content: '●'; font-size: 0.5rem; animation: pulse 2s ease infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
-
-    .hero-title {
-      font-size: clamp(2.8rem, 6vw, 5.5rem);
-      font-weight: 800; letter-spacing: -2px;
-      line-height: 1.05;
-      animation: fadeUp 0.6s 0.1s ease both;
-    }
-    .hero-title .grad {
-      background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-
-    .hero-sub {
-      margin-top: 1.5rem;
-      font-size: 1.1rem; color: var(--text-muted); max-width: 560px; line-height: 1.7;
-      animation: fadeUp 0.6s 0.2s ease both;
-    }
-
-    .hero-btns {
-      margin-top: 2.5rem; display: flex; gap: 1rem; flex-wrap: wrap;
-      animation: fadeUp 0.6s 0.3s ease both;
-    }
-
-    .btn-primary {
-      background: var(--accent-grad); color: #fff;
-      font-weight: 700; font-size: 1rem;
-      padding: 0.85rem 2rem; border-radius: 10px;
-      border: none; cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 8px 32px rgba(14,165,233,0.35);
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(14,165,233,0.5); }
-
-    .btn-outline {
-      background: transparent; color: var(--text);
-      font-weight: 600; font-size: 1rem;
-      padding: 0.85rem 2rem; border-radius: 10px;
-      border: 1px solid var(--border); cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .btn-outline:hover { border-color: var(--accent); background: rgba(14,165,233,0.07); }
-
-    .hero-stats {
-      margin-top: 4rem; display: flex; gap: 3rem; flex-wrap: wrap;
-      animation: fadeUp 0.6s 0.4s ease both;
-    }
-    .stat-item { }
-    .stat-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 2.2rem; font-weight: 800;
-      background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.1rem; letter-spacing: 0.05em; text-transform: uppercase; }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ─── SECTION COMMONS ─── */
-    section { position: relative; padding: 100px 5%; }
-
-    .section-tag {
-      display: inline-block;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 1rem;
-    }
-
-    .section-title {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800; letter-spacing: -1px;
-      max-width: 700px;
-    }
-    .section-title .grad {
-      background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-
-    .section-sub {
-      margin-top: 1rem; color: var(--text-muted);
-      font-size: 1.05rem; max-width: 560px; line-height: 1.7;
-    }
-
-    .reveal {
-      opacity: 0; transform: translateY(32px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal.visible { opacity: 1; transform: none; }
-
-    /* ─── ABOUT ─── */
-    #about { background: var(--bg-2); }
-    .about-inner {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-    }
-    .about-visual {
-      position: relative;
-    }
-    .about-card-main {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 20px; padding: 2rem;
-      box-shadow: var(--glow);
-    }
-    .about-card-main h3 { font-size: 1.4rem; margin-bottom: 0.75rem; }
-    .about-card-main p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
-    .about-float {
-      position: absolute; bottom: -24px; right: -24px;
-      background: var(--accent-grad); color: #fff;
-      border-radius: 16px; padding: 1.25rem 1.5rem;
-      font-family: 'Syne', sans-serif;
-    }
-    .about-float strong { font-size: 2rem; display: block; font-weight: 800; }
-    .about-float span { font-size: 0.8rem; opacity: 0.85; }
-
-    .about-text ul {
-      list-style: none; margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem;
-    }
-    .about-text ul li {
-      display: flex; gap: 0.75rem; align-items: flex-start;
-      font-size: 0.95rem; color: var(--text-muted);
-    }
-    .about-text ul li::before {
-      content: '✦';
-      color: var(--accent); flex-shrink: 0; margin-top: 2px;
-    }
-
-    /* ─── SERVICES ─── */
-    #services { }
-    .services-grid {
-      margin-top: 4rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
-    }
-    .service-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 20px; padding: 2rem;
-      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-      cursor: default;
-      position: relative; overflow: hidden;
-    }
-    .service-card::before {
-      content: '';
-      position: absolute; inset: 0; border-radius: 20px;
-      background: var(--accent-grad);
-      opacity: 0; transition: opacity 0.3s ease;
-      z-index: 0;
-    }
-    .service-card:hover { transform: translateY(-6px); border-color: rgba(14,165,233,0.4); box-shadow: 0 20px 60px rgba(14,165,233,0.12); }
-    .service-card:hover::before { opacity: 0.04; }
-    .service-card > * { position: relative; z-index: 1; }
-
-    .service-icon {
-      width: 52px; height: 52px; border-radius: 14px;
-      background: rgba(14,165,233,0.12); border: 1px solid rgba(14,165,233,0.2);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem; margin-bottom: 1.25rem;
-      transition: background 0.3s, transform 0.3s;
-    }
-    .service-card:hover .service-icon { background: rgba(14,165,233,0.2); transform: scale(1.1); }
-
-    .service-card h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
-    .service-card p { color: var(--text-muted); font-size: 0.875rem; line-height: 1.65; }
-    .service-card .s-cta {
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      margin-top: 1.25rem; color: var(--accent);
-      font-size: 0.85rem; font-weight: 600;
-      transition: gap 0.2s;
-    }
-    .service-card:hover .s-cta { gap: 0.6rem; }
-
-    /* ─── WHY US ─── */
-    #why { background: var(--bg-2); }
-    .why-grid {
-      margin-top: 4rem;
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.5rem;
-    }
-    .why-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 16px; padding: 1.75rem;
-      transition: transform 0.3s, border-color 0.3s;
-    }
-    .why-card:hover { transform: translateY(-4px); border-color: rgba(99,102,241,0.4); }
-    .why-num {
-      font-family: 'Syne', sans-serif; font-size: 2.5rem; font-weight: 800;
-      background: var(--accent-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      line-height: 1;
-    }
-    .why-card h3 { font-size: 1.05rem; margin: 0.5rem 0 0.5rem; }
-    .why-card p { font-size: 0.875rem; color: var(--text-muted); line-height: 1.6; }
-
-    /* ─── PORTFOLIO ─── */
-    #portfolio { }
-    .portfolio-grid {
-      margin-top: 4rem;
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem;
-    }
-    .portfolio-card {
-      border-radius: 20px; overflow: hidden;
-      background: var(--bg-card); border: 1px solid var(--border);
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: default;
-    }
-    .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 20px 50px rgba(14,165,233,0.12); }
-    .portfolio-img {
-      height: 200px;
-      background: linear-gradient(135deg, var(--bg-card-hover), #0a1428);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3rem;
-      position: relative; overflow: hidden;
-    }
-    .portfolio-img::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: var(--accent-grad); opacity: 0.1;
-    }
-    .portfolio-body { padding: 1.5rem; }
-    .portfolio-tag {
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 0.5rem;
-    }
-    .portfolio-body h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .portfolio-body p { font-size: 0.875rem; color: var(--text-muted); }
-
-    /* ─── PROCESS ─── */
-    #process { background: var(--bg-2); }
-    .process-steps {
-      margin-top: 4rem;
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2rem;
-      position: relative;
-    }
-    .process-step { text-align: center; position: relative; }
-    .step-circle {
-      width: 64px; height: 64px; border-radius: 50%;
-      background: var(--accent-grad);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; color: #fff;
-      margin: 0 auto 1rem;
-      box-shadow: 0 8px 30px rgba(14,165,233,0.35);
-    }
-    .process-step h3 { font-size: 1rem; margin-bottom: 0.4rem; }
-    .process-step p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
-
-    /* ─── TESTIMONIALS ─── */
-    #testimonials { }
-    .testi-grid {
-      margin-top: 4rem;
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;
-    }
-    .testi-card {
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 20px; padding: 2rem;
-      transition: transform 0.3s, border-color 0.3s;
-    }
-    .testi-card:hover { transform: translateY(-4px); border-color: rgba(14,165,233,0.3); }
-    .stars { color: #fbbf24; font-size: 0.85rem; margin-bottom: 1rem; letter-spacing: 2px; }
-    .testi-text { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; font-style: italic; }
-    .testi-author { margin-top: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
-    .testi-avatar {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: var(--accent-grad);
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 0.9rem; color: #fff;
-      flex-shrink: 0;
-    }
-    .testi-name { font-size: 0.9rem; font-weight: 600; }
-    .testi-role { font-size: 0.78rem; color: var(--text-muted); }
-
-    /* ─── FAQ ─── */
-    #faq { background: var(--bg-2); }
-    .faq-list { margin-top: 4rem; max-width: 800px; display: flex; flex-direction: column; gap: 1rem; }
-    .faq-item {
-      background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
-    }
-    .faq-q {
-      width: 100%; text-align: left; background: none; border: none; color: var(--text);
-      font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 600;
-      padding: 1.25rem 1.5rem; cursor: pointer;
-      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
-    }
-    .faq-q:hover { color: var(--accent); }
-    .faq-icon { font-size: 1.2rem; transition: transform 0.3s; flex-shrink: 0; color: var(--accent); }
-    .faq-item.open .faq-icon { transform: rotate(45deg); }
-    .faq-a {
-      max-height: 0; overflow: hidden;
-      transition: max-height 0.4s ease, padding 0.3s ease;
-      padding: 0 1.5rem;
-      font-size: 0.9rem; color: var(--text-muted); line-height: 1.7;
-    }
-    .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.25rem; }
-
-    /* ─── CTA BANNER ─── */
-    .cta-banner {
-      margin: 0 5%;
-      background: var(--accent-grad);
-      border-radius: 24px; padding: 4rem 3rem;
-      text-align: center; position: relative; overflow: hidden;
-    }
-    .cta-banner::before {
-      content: '';
-      position: absolute; width: 400px; height: 400px; border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-      top: -100px; right: -100px; pointer-events: none;
-    }
-    .cta-banner h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); color: #fff; margin-bottom: 0.75rem; }
-    .cta-banner p { color: rgba(255,255,255,0.8); font-size: 1.05rem; margin-bottom: 2rem; max-width: 520px; margin-left: auto; margin-right: auto; }
-    .btn-white {
-      background: #fff; color: #0ea5e9;
-      font-weight: 700; font-size: 1rem;
-      padding: 0.85rem 2rem; border-radius: 10px; border: none; cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
-      display: inline-block;
-    }
-    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(0,0,0,0.25); }
-
-    /* ─── CONTACT ─── */
-    #contact { }
-    .contact-inner {
-      display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; margin-top: 4rem; align-items: start;
-    }
-    .contact-info { }
-    .contact-info h3 { font-size: 1.4rem; margin-bottom: 1.5rem; }
-    .contact-detail {
-      display: flex; align-items: flex-start; gap: 1rem;
-      margin-bottom: 1.25rem; font-size: 0.9rem; color: var(--text-muted);
-    }
-    .contact-icon {
-      width: 40px; height: 40px; border-radius: 10px;
-      background: rgba(14,165,233,0.12); border: 1px solid rgba(14,165,233,0.2);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem; flex-shrink: 0;
-    }
-    .contact-detail strong { display: block; color: var(--text); font-size: 0.95rem; margin-bottom: 0.15rem; }
-    .social-row { display: flex; gap: 0.75rem; margin-top: 2rem; }
-    .social-btn {
-      width: 42px; height: 42px; border-radius: 10px;
-      background: var(--bg-card); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem; transition: border-color 0.2s, background 0.2s;
-      cursor: pointer;
-    }
-    .social-btn:hover { border-color: var(--accent); background: rgba(14,165,233,0.1); }
-
-    .contact-form { }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { margin-bottom: 1rem; }
-    .form-group label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); margin-bottom: 0.4rem; letter-spacing: 0.05em; text-transform: uppercase; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      background: var(--bg-card); border: 1px solid var(--border);
-      border-radius: 10px; padding: 0.75rem 1rem;
-      color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
-      outline: none; transition: border-color 0.2s;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--accent); }
-    .form-group textarea { resize: vertical; min-height: 120px; }
-    .form-group select option { background: var(--bg-2); }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background: var(--bg-2); border-top: 1px solid var(--border);
-      padding: 4rem 5% 2rem;
-    }
-    .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem;
-    }
-    .footer-brand .nav-logo { font-size: 1.3rem; }
-    .footer-brand p { margin-top: 1rem; font-size: 0.875rem; color: var(--text-muted); line-height: 1.7; max-width: 280px; }
-    .footer-col h4 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem; }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col li { font-size: 0.875rem; color: var(--text-muted); }
-    .footer-col a:hover { color: var(--text); }
-    .footer-bottom {
-      padding-top: 2rem; border-top: 1px solid var(--border);
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
-      font-size: 0.8rem; color: var(--text-muted);
-    }
-
-    /* ─── FLOATING WA ─── */
-    .whatsapp-float {
-      position: fixed; bottom: 24px; right: 24px; z-index: 999;
-      width: 56px; height: 56px; border-radius: 50%;
-      background: #25d366;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; box-shadow: 0 8px 24px rgba(37,211,102,0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 12px 32px rgba(37,211,102,0.55); }
-
-    /* ─── MOBILE STICKY CTA ─── */
-    .mobile-sticky-cta {
-      display: none;
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
-      background: var(--accent-grad);
-      padding: 1rem 1.5rem;
-      text-align: center;
-    }
-    .mobile-sticky-cta a {
-      color: #fff; font-weight: 700; font-size: 1rem;
-    }
-
-    /* ─── DIVIDER ─── */
-    .divider {
-      height: 1px; background: var(--border); margin: 0 5%;
-    }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 1024px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-      .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .mobile-sticky-cta { display: block; }
-      .whatsapp-float { bottom: 80px; }
-      section { padding: 70px 5%; }
-      .hero-stats { gap: 1.5rem; }
-      .about-float { position: relative; bottom: auto; right: auto; margin-top: 1.5rem; }
-      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .form-row { grid-template-columns: 1fr; }
-      .cta-banner { padding: 3rem 1.75rem; }
-      .process-steps { grid-template-columns: 1fr 1fr; }
-      body { padding-bottom: 60px; }
-    }
-
-    @media (max-width: 480px) {
-      .hero-title { letter-spacing: -1.5px; }
-      .services-grid { grid-template-columns: 1fr; }
-      .testi-grid { grid-template-columns: 1fr; }
-      .portfolio-grid { grid-template-columns: 1fr; }
-      .process-steps { grid-template-columns: 1fr; }
-      .why-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ─── COUNTER ANIM ─── */
-    .count-up { display: inline; }
-
-    /* ─── CLIENTS STRIP ─── */
-    .clients-strip {
-      overflow: hidden; padding: 3rem 0;
-      background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
-    }
-    .clients-inner {
-      display: flex; gap: 4rem; align-items: center;
-      animation: marquee 25s linear infinite; width: max-content;
-    }
-    .clients-inner:hover { animation-play-state: paused; }
-    @keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-    .client-name {
-      font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700;
-      color: var(--text-muted); white-space: nowrap; opacity: 0.5;
-      transition: opacity 0.2s;
-    }
-    .client-name:hover { opacity: 1; }
+    /* ── RESPONSIVE ── */
+    @media(max-width:1024px){.hero-wrap{grid-template-columns:1fr}.hero-visual{display:none}.about-inner{grid-template-columns:1fr;gap:3rem}.contact-inner{grid-template-columns:1fr;gap:3rem}.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+    @media(max-width:768px){.nav-links,.nav-cta{display:none}.hamburger{display:flex}.mobile-sticky-cta{display:block}.whatsapp-float{bottom:76px}section{padding:70px 5%}.hero-stats{gap:1.5rem}.footer-grid{grid-template-columns:1fr;gap:2rem}.footer-bottom{flex-direction:column;text-align:center}.form-row{grid-template-columns:1fr}.cta-banner{padding:3rem 1.75rem;margin:0 4%}body{padding-bottom:64px}.about-float{position:relative;bottom:auto;left:auto;margin-top:1.5rem;display:inline-block}}
+    @media(max-width:480px){.services-grid,.testi-grid,.portfolio-grid{grid-template-columns:1fr}.process-steps{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr}.hero-title{letter-spacing:-1px}}
   </style>
 </head>
 <body>
 
-<!-- ─── NAVBAR ─── -->
+<!-- NAVBAR -->
 <nav id="navbar" role="navigation" aria-label="Main navigation">
-  <a href="#home" class="nav-logo">Active<span>Retail</span></a>
+  <a href="#home" class="nav-logo">Active<span class="teal">Retail</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#portfolio">Work</a></li>
     <li><a href="#process">Process</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Get Free Proposal</a>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav>
 
-<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobile-menu">
   <ul>
     <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
@@ -699,332 +304,164 @@
     <li><a href="#faq" onclick="closeMobileMenu()">FAQ</a></li>
     <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
   </ul>
-  <a href="#contact" class="m-cta" onclick="closeMobileMenu()">Get Free Proposal →</a>
+  <a href="#contact" class="m-cta" onclick="closeMobileMenu()">🚀 Get Free Proposal</a>
 </div>
 
-<!-- ─── HERO ─── -->
-<section id="home" aria-label="Hero section">
-  <div class="grid-bg"></div>
-  <div class="hero-orb-1"></div>
-  <div class="hero-orb-2"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Karachi's #1 Software & Marketing Agency</div>
-    <h1 class="hero-title">
-      We Build, Market &<br><span class="grad">Scale Your Business</span>
-    </h1>
-    <p class="hero-sub">
-      From powerful software solutions to performance-driven digital marketing — ActiveRetail is your end-to-end partner for measurable growth, dominance on Google, and a world-class digital presence.
-    </p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Start Your Project →</a>
-      <a href="#services" class="btn-outline">Explore Services</a>
+<!-- HERO -->
+<section id="home" aria-label="Hero">
+  <div class="hero-wrap">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="blink"></span>Karachi's #1 Software & Digital Agency</div>
+      <h1 class="hero-title">We Build, Market<br>&amp; <span class="teal"><span class="ul">Scale</span> Your</span><br>Business Online</h1>
+      <p class="hero-sub">From high-converting websites to performance-driven ad campaigns — ActiveRetail is your all-in-one partner for software development, digital marketing, and measurable business growth.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Start Your Project →</a>
+        <a href="#services" class="btn-outline">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num"><span class="count-up" data-target="150">0</span><span class="s">+</span></div><div class="stat-label">Projects Delivered</div></div>
+        <div><div class="stat-num"><span class="count-up" data-target="98">0</span><span class="s">%</span></div><div class="stat-label">Client Satisfaction</div></div>
+        <div><div class="stat-num"><span class="count-up" data-target="8">0</span><span class="s">+</span></div><div class="stat-label">Years Experience</div></div>
+        <div><div class="stat-num"><span class="count-up" data-target="40">0</span><span class="s">M+</span></div><div class="stat-label">Ad Revenue Managed</div></div>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num"><span class="count-up" data-target="150">0</span>+</div>
-        <div class="stat-label">Projects Delivered</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num"><span class="count-up" data-target="98">0</span>%</div>
-        <div class="stat-label">Client Satisfaction</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num"><span class="count-up" data-target="8">0</span>+</div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num"><span class="count-up" data-target="40">0</span>M+</div>
-        <div class="stat-label">Ad Revenue Managed</div>
+    <div class="hero-visual" aria-hidden="true">
+      <div style="position:relative;">
+        <div class="h-card-main">
+          <div class="h-badge-live"><span class="live-dot"></span>Live Campaign Data</div>
+          <div class="kpi-label">This Month's Revenue</div>
+          <div class="kpi-val">Rs. <span class="teal">2.4M</span></div>
+          <div class="kpi-sub">↑ 38% from last month</div>
+          <div class="bar-row">
+            <div><div class="bar-label"><span>Google Ads ROAS</span><span>6.2x</span></div><div class="bar-track"><div class="bar-fill" style="width:78%"></div></div></div>
+            <div><div class="bar-label"><span>Facebook ROAS</span><span>4.8x</span></div><div class="bar-track"><div class="bar-fill" style="width:60%"></div></div></div>
+            <div><div class="bar-label"><span>Organic Traffic</span><span>+142%</span></div><div class="bar-track"><div class="bar-fill" style="width:90%"></div></div></div>
+          </div>
+        </div>
+        <div class="h-float-card"><strong>340%</strong><span>Avg. ROAS Improvement</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── CLIENTS STRIP ─── -->
-<div class="clients-strip" aria-label="Trusted by leading brands">
+<!-- CLIENTS -->
+<div class="clients-strip" aria-label="Trusted by brands">
+  <div class="clients-label">Trusted by growing businesses across Pakistan</div>
   <div class="clients-inner">
-    <span class="client-name">ShopGo PK</span>
-    <span class="client-name">RetailMax</span>
-    <span class="client-name">NovaMart</span>
-    <span class="client-name">BrandHouse</span>
-    <span class="client-name">TechStore PK</span>
-    <span class="client-name">GrowthCo</span>
-    <span class="client-name">ClickBridge</span>
-    <span class="client-name">ZenCommerce</span>
-    <span class="client-name">PakStores</span>
-    <span class="client-name">LaunchPad</span>
-    <!-- Duplicate for seamless loop -->
-    <span class="client-name">ShopGo PK</span>
-    <span class="client-name">RetailMax</span>
-    <span class="client-name">NovaMart</span>
-    <span class="client-name">BrandHouse</span>
-    <span class="client-name">TechStore PK</span>
-    <span class="client-name">GrowthCo</span>
-    <span class="client-name">ClickBridge</span>
-    <span class="client-name">ZenCommerce</span>
-    <span class="client-name">PakStores</span>
-    <span class="client-name">LaunchPad</span>
+    <span class="client-name">ShopGo PK</span><span class="client-name">RetailMax</span><span class="client-name">NovaMart</span><span class="client-name">BrandHouse</span><span class="client-name">TechStore PK</span><span class="client-name">GrowthCo</span><span class="client-name">ClickBridge</span><span class="client-name">ZenCommerce</span><span class="client-name">PakStores</span><span class="client-name">LaunchPad</span>
+    <span class="client-name">ShopGo PK</span><span class="client-name">RetailMax</span><span class="client-name">NovaMart</span><span class="client-name">BrandHouse</span><span class="client-name">TechStore PK</span><span class="client-name">GrowthCo</span><span class="client-name">ClickBridge</span><span class="client-name">ZenCommerce</span><span class="client-name">PakStores</span><span class="client-name">LaunchPad</span>
   </div>
 </div>
 
-<!-- ─── ABOUT ─── -->
+<!-- ABOUT -->
 <section id="about" aria-label="About ActiveRetail">
   <div class="about-inner">
     <div class="about-visual reveal">
-      <div class="about-card-main">
-        <h3>Built for Results, Not Just Deliverables</h3>
-        <p>ActiveRetail was founded with one mission: to bridge the gap between technology and business growth. We're not just an agency — we're your strategic partner, combining battle-tested software development with data-driven marketing to deliver real, measurable outcomes.</p>
-        <div style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
-          <div style="background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.2);border-radius:10px;padding:0.75rem 1.1rem;font-size:0.8rem;font-weight:600;color:var(--accent);">ISO-Certified Process</div>
-          <div style="background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.2);border-radius:10px;padding:0.75rem 1.1rem;font-size:0.8rem;font-weight:600;color:#818cf8;">Google Partner Agency</div>
-          <div style="background:rgba(14,165,233,0.1);border:1px solid rgba(14,165,233,0.2);border-radius:10px;padding:0.75rem 1.1rem;font-size:0.8rem;font-weight:600;color:var(--accent);">Shopify Experts</div>
+      <div class="about-img-box">
+        <h3>Built for Results,<br>Not Just Deliverables</h3>
+        <p>ActiveRetail was founded with one mission: to bridge the gap between technology and business growth. We're not just an agency — we're your strategic partner combining battle-tested software development with data-driven marketing.</p>
+        <div class="about-chips">
+          <span class="chip">Google Partner Agency</span>
+          <span class="chip">Shopify Experts</span>
+          <span class="chip">8+ Years Experience</span>
+          <span class="chip">ISO-Certified Process</span>
         </div>
       </div>
-      <div class="about-float">
-        <strong>8+</strong>
-        <span>Years of Excellence</span>
-      </div>
+      <div class="about-float"><strong>150+</strong><span>Successful Projects</span></div>
     </div>
-    <div class="about-text reveal" style="transition-delay:0.15s">
+    <div class="about-text reveal" style="transition-delay:.15s">
       <p class="section-tag">About Us</p>
-      <h2 class="section-title">A Team That <span class="grad">Delivers Beyond</span> Expectations</h2>
-      <p class="section-sub">We combine creative design, robust engineering, and performance marketing under one roof. Our multidisciplinary team of developers, strategists, and ad specialists works as an extension of your business.</p>
+      <h2 class="section-title">A Team That Delivers <span class="accent">Beyond Expectations</span></h2>
+      <p class="section-sub">We combine creative design, robust engineering, and performance marketing under one roof. Our multidisciplinary team works as an extension of your business.</p>
       <ul>
-        <li>End-to-end digital solutions from strategy to execution</li>
-        <li>Google Ads & Facebook Ads management with proven ROI</li>
-        <li>Custom OMS, POS & e-commerce software tailored for Pakistani market</li>
-        <li>WordPress, Shopify & custom website development</li>
-        <li>Transparent reporting and dedicated account management</li>
-        <li>Agile development process with on-time delivery guarantee</li>
+        <li><div class="li-icon">✓</div>End-to-end digital solutions from strategy to execution</li>
+        <li><div class="li-icon">✓</div>Google Ads & Facebook Ads management with proven ROI</li>
+        <li><div class="li-icon">✓</div>Custom OMS, POS & e-commerce software for Pakistani market</li>
+        <li><div class="li-icon">✓</div>WordPress, Shopify & custom website development</li>
+        <li><div class="li-icon">✓</div>Transparent reporting with dedicated account management</li>
+        <li><div class="li-icon">✓</div>Agile development with on-time delivery guarantee</li>
       </ul>
-      <div style="margin-top:2rem;">
+      <div style="margin-top:2.25rem;display:flex;gap:1rem;flex-wrap:wrap;">
         <a href="#contact" class="btn-primary">Talk to Our Team →</a>
+        <a href="#services" class="btn-outline">View Services</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ─── SERVICES ─── -->
+<!-- SERVICES -->
 <section id="services" aria-label="Our services">
   <div class="reveal">
     <p class="section-tag">What We Offer</p>
-    <h2 class="section-title">Services That Drive <span class="grad">Real Growth</span></h2>
+    <h2 class="section-title">Services That Drive <span class="accent">Real Growth</span></h2>
     <p class="section-sub">From paid advertising to enterprise software — every service is engineered to maximize your ROI and accelerate business growth.</p>
   </div>
-
   <div class="services-grid" role="list">
-
-    <article class="service-card reveal" role="listitem">
-      <div class="service-icon" aria-hidden="true">🎯</div>
-      <h3>Google Ads Management</h3>
-      <p>Dominate search results with precision-targeted campaigns. Our certified Google Ads experts maximize your ad spend with advanced bidding strategies, negative keyword filtering, and conversion tracking to deliver measurable ROI.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
-    <article class="service-card reveal" role="listitem" style="transition-delay:0.05s">
-      <div class="service-icon" aria-hidden="true">📱</div>
-      <h3>Facebook & Instagram Ads</h3>
-      <p>Reach your ideal customers on Meta platforms with laser-targeted ad campaigns. From awareness funnels to retargeting, our Facebook Ads experts craft creatives and audiences that convert at scale.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
-    <article class="service-card reveal" role="listitem" style="transition-delay:0.1s">
-      <div class="service-icon" aria-hidden="true">🏪</div>
-      <h3>OMS / POS Software Solutions</h3>
-      <p>Streamline your retail and e-commerce operations with our custom-built Order Management and Point-of-Sale software. Multi-channel inventory sync, courier integrations, and real-time analytics in one powerful dashboard.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
-    <article class="service-card reveal" role="listitem" style="transition-delay:0.15s">
-      <div class="service-icon" aria-hidden="true">🛒</div>
-      <h3>E-commerce Website Development</h3>
-      <p>Launch high-converting e-commerce stores engineered for speed, SEO, and sales. We build scalable online stores with seamless payment gateways, mobile-first UX, and integrations tailored for your business model.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
-    <article class="service-card reveal" role="listitem" style="transition-delay:0.2s">
-      <div class="service-icon" aria-hidden="true">🌐</div>
-      <h3>WordPress Website Development</h3>
-      <p>Custom WordPress websites built for performance and growth. From corporate sites to WooCommerce stores, we deliver pixel-perfect, SEO-optimized WordPress solutions that load fast and rank higher on Google.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
-    <article class="service-card reveal" role="listitem" style="transition-delay:0.25s">
-      <div class="service-icon" aria-hidden="true">⚡</div>
-      <h3>Shopify Store Development</h3>
-      <p>Launch and scale your Shopify store with expert development, theme customization, app integrations, and conversion rate optimization. We build Shopify experiences that turn browsers into loyal buyers.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
-    <article class="service-card reveal" role="listitem" style="transition-delay:0.3s">
-      <div class="service-icon" aria-hidden="true">💻</div>
-      <h3>Custom Website Development</h3>
-      <p>Bespoke web applications built from the ground up with modern tech stacks. Whether you need a SaaS platform, business portal, or complex web app — we architect clean, scalable, and maintainable solutions.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
-    <article class="service-card reveal" role="listitem" style="transition-delay:0.35s">
-      <div class="service-icon" aria-hidden="true">🤖</div>
-      <h3>Business Automation Solutions</h3>
-      <p>Eliminate manual processes and scale without adding headcount. We automate order workflows, inventory updates, customer communications, reporting, and more — so your team focuses on what truly matters.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
-    <article class="service-card reveal" role="listitem" style="transition-delay:0.4s">
-      <div class="service-icon" aria-hidden="true">🚀</div>
-      <h3>Landing Page Design</h3>
-      <p>High-converting landing pages designed for your Google Ads and social campaigns. A/B tested layouts, persuasive copywriting, and CRO best practices that transform clicks into qualified leads and paying customers.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
-    <article class="service-card reveal" role="listitem" style="transition-delay:0.45s">
-      <div class="service-icon" aria-hidden="true">📈</div>
-      <h3>Digital Marketing Solutions</h3>
-      <p>Full-spectrum digital marketing encompassing SEO, PPC, social media, email marketing, and content strategy. We craft integrated campaigns that build brand authority, drive qualified traffic, and accelerate revenue growth.</p>
-      <a href="#contact" class="s-cta">Get Started →</a>
-    </article>
-
+    <article class="service-card reveal" role="listitem"><div class="service-icon">🎯</div><h3>Google Ads Management</h3><p>Dominate search results with precision-targeted campaigns. Our certified Google Ads experts maximize your ad spend with advanced bidding, negative keywords, and conversion tracking to deliver measurable ROI.</p><a href="#contact" class="s-cta">Get Started →</a></article>
+    <article class="service-card reveal" role="listitem" style="transition-delay:.05s"><div class="service-icon">📱</div><h3>Facebook & Instagram Ads</h3><p>Reach ideal customers on Meta platforms with laser-targeted campaigns. From awareness funnels to retargeting, our Facebook Ads experts craft creatives and audiences that convert at scale.</p><a href="#contact" class="s-cta">Get Started →</a></article>
+    <article class="service-card reveal" role="listitem" style="transition-delay:.1s"><div class="service-icon">🏪</div><h3>OMS / POS Software</h3><p>Streamline retail and e-commerce operations with custom-built Order Management and Point-of-Sale software. Multi-channel inventory sync, courier integrations, and real-time analytics in one dashboard.</p><a href="#contact" class="s-cta">Get Started →</a></article>
+    <article class="service-card reveal" role="listitem" style="transition-delay:.15s"><div class="service-icon">🛒</div><h3>E-commerce Development</h3><p>Launch high-converting online stores engineered for speed, SEO, and sales. We build scalable e-commerce stores with seamless payment gateways and mobile-first UX tailored to your business.</p><a href="#contact" class="s-cta">Get Started →</a></article>
+    <article class="service-card reveal" role="listitem" style="transition-delay:.2s"><div class="service-icon">🌐</div><h3>WordPress Development</h3><p>Custom WordPress websites built for performance and growth. From corporate sites to WooCommerce stores, we deliver pixel-perfect, SEO-optimized solutions that load fast and rank higher on Google.</p><a href="#contact" class="s-cta">Get Started →</a></article>
+    <article class="service-card reveal" role="listitem" style="transition-delay:.25s"><div class="service-icon">⚡</div><h3>Shopify Store Development</h3><p>Launch and scale your Shopify store with expert development, theme customization, app integrations, and CRO. We build Shopify experiences that turn browsers into loyal buyers.</p><a href="#contact" class="s-cta">Get Started →</a></article>
+    <article class="service-card reveal" role="listitem" style="transition-delay:.3s"><div class="service-icon">💻</div><h3>Custom Website Development</h3><p>Bespoke web applications built from the ground up with modern tech stacks. SaaS platforms, business portals, or complex web apps — we architect clean, scalable, maintainable solutions.</p><a href="#contact" class="s-cta">Get Started →</a></article>
+    <article class="service-card reveal" role="listitem" style="transition-delay:.35s"><div class="service-icon">🤖</div><h3>Business Automation</h3><p>Eliminate manual processes and scale without adding headcount. We automate order workflows, inventory updates, customer communications, and reporting so your team focuses on what matters.</p><a href="#contact" class="s-cta">Get Started →</a></article>
+    <article class="service-card reveal" role="listitem" style="transition-delay:.4s"><div class="service-icon">🚀</div><h3>Landing Page Design</h3><p>High-converting landing pages designed for Google Ads and social campaigns. A/B tested layouts, persuasive copy, and CRO best practices that transform clicks into qualified leads and customers.</p><a href="#contact" class="s-cta">Get Started →</a></article>
+    <article class="service-card reveal" role="listitem" style="transition-delay:.45s"><div class="service-icon">📈</div><h3>Digital Marketing Solutions</h3><p>Full-spectrum digital marketing: SEO, PPC, social media, email marketing, and content strategy. Integrated campaigns that build brand authority, drive qualified traffic, and accelerate revenue growth.</p><a href="#contact" class="s-cta">Get Started →</a></article>
   </div>
 </section>
 
-<!-- ─── WHY CHOOSE US ─── -->
+<!-- WHY US -->
 <section id="why" aria-label="Why choose ActiveRetail">
   <div class="reveal">
     <p class="section-tag">Why ActiveRetail</p>
-    <h2 class="section-title">The Difference Is in <span class="grad">Every Detail</span></h2>
+    <h2 class="section-title">The Difference Is in <span class="accent">Every Detail</span></h2>
     <p class="section-sub">We've built our reputation on results, transparency, and a relentless commitment to client success.</p>
   </div>
   <div class="why-grid">
-    <div class="why-card reveal">
-      <div class="why-num">01</div>
-      <h3>Results-First Approach</h3>
-      <p>Every decision is backed by data. We optimize for the KPIs that actually move your business needle — conversions, revenue, and ROI.</p>
-    </div>
-    <div class="why-card reveal" style="transition-delay:0.08s">
-      <div class="why-num">02</div>
-      <h3>Full-Stack Expertise</h3>
-      <p>Development, design, and marketing under one roof. No fragmented teams, no miscommunication — just seamless execution from brief to launch.</p>
-    </div>
-    <div class="why-card reveal" style="transition-delay:0.16s">
-      <div class="why-num">03</div>
-      <h3>Transparent Reporting</h3>
-      <p>Real-time dashboards and monthly performance reports keep you informed. You'll always know exactly where your budget is going.</p>
-    </div>
-    <div class="why-card reveal" style="transition-delay:0.24s">
-      <div class="why-num">04</div>
-      <h3>Agile & On-Time</h3>
-      <p>We follow agile sprint cycles with clear milestones. Deadlines aren't suggestions — they're commitments we take seriously.</p>
-    </div>
-    <div class="why-card reveal" style="transition-delay:0.32s">
-      <div class="why-num">05</div>
-      <h3>Dedicated Support</h3>
-      <p>Your dedicated account manager is always a WhatsApp message away. We pride ourselves on response times under 2 hours.</p>
-    </div>
-    <div class="why-card reveal" style="transition-delay:0.4s">
-      <div class="why-num">06</div>
-      <h3>Scalable Solutions</h3>
-      <p>Built to grow with you. Our software and marketing frameworks are architected to scale from startup to enterprise without re-building from scratch.</p>
-    </div>
+    <div class="why-card reveal"><div class="why-num">01</div><h3>Results-First Approach</h3><p>Every decision is backed by data. We optimize for KPIs that actually move your business needle — conversions, revenue, and ROI.</p></div>
+    <div class="why-card reveal" style="transition-delay:.08s"><div class="why-num">02</div><h3>Full-Stack Expertise</h3><p>Development, design, and marketing under one roof. No fragmented teams — just seamless execution from brief to launch.</p></div>
+    <div class="why-card reveal" style="transition-delay:.16s"><div class="why-num">03</div><h3>Transparent Reporting</h3><p>Real-time dashboards and monthly reports keep you informed. You'll always know exactly where your budget is going.</p></div>
+    <div class="why-card reveal" style="transition-delay:.24s"><div class="why-num">04</div><h3>Agile & On-Time</h3><p>We follow agile sprints with clear milestones. Deadlines aren't suggestions — they're commitments we keep.</p></div>
+    <div class="why-card reveal" style="transition-delay:.32s"><div class="why-num">05</div><h3>Dedicated Support</h3><p>Your dedicated account manager is always a WhatsApp away. We pride ourselves on sub-2-hour response times.</p></div>
+    <div class="why-card reveal" style="transition-delay:.4s"><div class="why-num">06</div><h3>Scalable Solutions</h3><p>Built to grow with you. Our frameworks scale from startup to enterprise without rebuilding from scratch.</p></div>
   </div>
 </section>
 
-<!-- ─── PORTFOLIO ─── -->
-<section id="portfolio" aria-label="Portfolio and case studies">
+<!-- PORTFOLIO -->
+<section id="portfolio" aria-label="Portfolio">
   <div class="reveal">
     <p class="section-tag">Our Work</p>
-    <h2 class="section-title">Projects That <span class="grad">Speak for Themselves</span></h2>
-    <p class="section-sub">A selection of work that demonstrates what's possible when strategy, design, and technology come together.</p>
+    <h2 class="section-title">Projects That <span class="accent">Speak for Themselves</span></h2>
+    <p class="section-sub">A selection of work demonstrating what's possible when strategy, design, and technology come together.</p>
   </div>
   <div class="portfolio-grid">
-    <article class="portfolio-card reveal">
-      <div class="portfolio-img" aria-label="E-commerce platform screenshot">🛍️</div>
-      <div class="portfolio-body">
-        <p class="portfolio-tag">Shopify Development</p>
-        <h3>Fashion Retailer — 5x Revenue Growth</h3>
-        <p>End-to-end Shopify store build with custom theme, Google Shopping integration, and Meta Ads funnel. Scaled from Rs. 200K to Rs. 1M+ monthly revenue in 6 months.</p>
-      </div>
-    </article>
-    <article class="portfolio-card reveal" style="transition-delay:0.1s">
-      <div class="portfolio-img" aria-label="OMS dashboard screenshot">📦</div>
-      <div class="portfolio-body">
-        <p class="portfolio-tag">OMS Software</p>
-        <h3>Multi-Channel OMS for 10K+ Daily Orders</h3>
-        <p>Custom-built order management system handling Shopify, WooCommerce, and social orders simultaneously with automated courier dispatch and real-time tracking.</p>
-      </div>
-    </article>
-    <article class="portfolio-card reveal" style="transition-delay:0.2s">
-      <div class="portfolio-img" aria-label="Google Ads campaign screenshot">📊</div>
-      <div class="portfolio-body">
-        <p class="portfolio-tag">Google Ads Management</p>
-        <h3>SaaS Company — 340% ROAS Improvement</h3>
-        <p>Complete Google Ads account restructure with smart bidding, audience segmentation, and landing page CRO — reducing CPA by 65% within 90 days.</p>
-      </div>
-    </article>
-    <article class="portfolio-card reveal" style="transition-delay:0.3s">
-      <div class="portfolio-img" aria-label="WordPress website screenshot">🌐</div>
-      <div class="portfolio-body">
-        <p class="portfolio-tag">WordPress Development</p>
-        <h3>Corporate Website — 200% Organic Traffic Boost</h3>
-        <p>SEO-first WordPress build with custom Gutenberg blocks, speed optimization, and technical SEO. Organic sessions tripled in under 4 months post-launch.</p>
-      </div>
-    </article>
-    <article class="portfolio-card reveal" style="transition-delay:0.4s">
-      <div class="portfolio-img" aria-label="POS system screenshot">🏷️</div>
-      <div class="portfolio-body">
-        <p class="portfolio-tag">POS Software</p>
-        <h3>Retail Chain POS — 40+ Branch Deployment</h3>
-        <p>Cloud-based POS system deployed across 40+ retail branches with centralized inventory, daily reporting, and role-based access for staff management.</p>
-      </div>
-    </article>
-    <article class="portfolio-card reveal" style="transition-delay:0.5s">
-      <div class="portfolio-img" aria-label="Digital marketing campaign screenshot">🚀</div>
-      <div class="portfolio-body">
-        <p class="portfolio-tag">Digital Marketing</p>
-        <h3>E-commerce Brand — 12K Leads in 3 Months</h3>
-        <p>Full-funnel Facebook & Instagram campaign with video creatives, lookalike audiences, and retargeting — generating over 12,000 qualified leads at Rs. 45 CPL.</p>
-      </div>
-    </article>
+    <article class="portfolio-card reveal"><div class="portfolio-img" aria-label="Shopify project">🛍️</div><div class="portfolio-body"><span class="portfolio-tag">Shopify Development</span><h3>Fashion Retailer — 5x Revenue Growth</h3><p>End-to-end Shopify store with custom theme, Google Shopping, and Meta Ads funnel. Scaled from Rs.200K to Rs.1M+ monthly in 6 months.</p></div></article>
+    <article class="portfolio-card reveal" style="transition-delay:.1s"><div class="portfolio-img" aria-label="OMS project">📦</div><div class="portfolio-body"><span class="portfolio-tag">OMS Software</span><h3>Multi-Channel OMS — 10K+ Daily Orders</h3><p>Custom OMS handling Shopify, WooCommerce, and social orders simultaneously with automated courier dispatch and real-time tracking.</p></div></article>
+    <article class="portfolio-card reveal" style="transition-delay:.2s"><div class="portfolio-img" aria-label="Google Ads project">📊</div><div class="portfolio-body"><span class="portfolio-tag">Google Ads Management</span><h3>SaaS Company — 340% ROAS Improvement</h3><p>Full Google Ads account restructure with smart bidding and CRO — reducing CPA by 65% within 90 days.</p></div></article>
+    <article class="portfolio-card reveal" style="transition-delay:.3s"><div class="portfolio-img" aria-label="WordPress project">🌐</div><div class="portfolio-body"><span class="portfolio-tag">WordPress Development</span><h3>Corporate Website — 200% Organic Traffic</h3><p>SEO-first WordPress build with technical optimization. Organic sessions tripled in under 4 months post-launch.</p></div></article>
+    <article class="portfolio-card reveal" style="transition-delay:.4s"><div class="portfolio-img" aria-label="POS project">🏷️</div><div class="portfolio-body"><span class="portfolio-tag">POS Software</span><h3>Retail Chain POS — 40+ Branch Deployment</h3><p>Cloud-based POS across 40+ branches with centralized inventory, daily reporting, and role-based staff access.</p></div></article>
+    <article class="portfolio-card reveal" style="transition-delay:.5s"><div class="portfolio-img" aria-label="Digital marketing project">🚀</div><div class="portfolio-body"><span class="portfolio-tag">Digital Marketing</span><h3>E-commerce Brand — 12K Leads in 3 Months</h3><p>Full-funnel Facebook & Instagram campaign generating 12,000+ qualified leads at Rs.45 CPL via video creatives and retargeting.</p></div></article>
   </div>
 </section>
 
-<!-- ─── PROCESS ─── -->
+<!-- PROCESS -->
 <section id="process" aria-label="How we work">
   <div class="reveal">
     <p class="section-tag">How We Work</p>
-    <h2 class="section-title">A Proven Process That <span class="grad">Delivers Every Time</span></h2>
+    <h2 class="section-title">A Proven Process That <span class="accent">Delivers Every Time</span></h2>
     <p class="section-sub">Our structured approach eliminates guesswork and ensures every project launches on time, on budget, and on point.</p>
   </div>
   <div class="process-steps">
-    <div class="process-step reveal">
-      <div class="step-circle">01</div>
-      <h3>Discovery & Strategy</h3>
-      <p>We dive deep into your business goals, target audience, and competitive landscape to craft a winning strategy before writing a single line of code or launching an ad.</p>
-    </div>
-    <div class="process-step reveal" style="transition-delay:0.1s">
-      <div class="step-circle">02</div>
-      <h3>Design & Architecture</h3>
-      <p>Wireframes, UI mockups, and technical architecture are finalized with your input. Nothing moves forward without your sign-off on the vision.</p>
-    </div>
-    <div class="process-step reveal" style="transition-delay:0.2s">
-      <div class="step-circle">03</div>
-      <h3>Build & Execute</h3>
-      <p>Our developers and marketers execute in agile sprints. Weekly updates keep you in the loop at every stage of development and campaign execution.</p>
-    </div>
-    <div class="process-step reveal" style="transition-delay:0.3s">
-      <div class="step-circle">04</div>
-      <h3>Test & Optimize</h3>
-      <p>Rigorous QA, A/B testing, and performance benchmarking ensure everything is flawless before going live. For marketing, we optimize relentlessly post-launch.</p>
-    </div>
-    <div class="process-step reveal" style="transition-delay:0.4s">
-      <div class="step-circle">05</div>
-      <h3>Launch & Scale</h3>
-      <p>We launch with precision, monitor closely, and scale what's working. Ongoing support, monthly reporting, and continuous improvement are standard — not extras.</p>
-    </div>
+    <div class="process-step reveal"><div class="step-circle">01</div><h3>Discovery & Strategy</h3><p>We dive deep into your goals, audience, and competition to craft a winning strategy before writing a single line of code.</p></div>
+    <div class="process-step reveal" style="transition-delay:.1s"><div class="step-circle">02</div><h3>Design & Architecture</h3><p>Wireframes, UI mockups, and technical architecture finalized with your input before anything is built.</p></div>
+    <div class="process-step reveal" style="transition-delay:.2s"><div class="step-circle">03</div><h3>Build & Execute</h3><p>Developers and marketers execute in agile sprints. Weekly updates keep you in the loop at every stage.</p></div>
+    <div class="process-step reveal" style="transition-delay:.3s"><div class="step-circle">04</div><h3>Test & Optimize</h3><p>Rigorous QA, A/B testing, and performance benchmarking ensure everything is flawless before going live.</p></div>
+    <div class="process-step reveal" style="transition-delay:.4s"><div class="step-circle">05</div><h3>Launch & Scale</h3><p>We launch with precision, monitor closely, and scale what's working. Ongoing support is standard, not extra.</p></div>
   </div>
 </section>
 
-<!-- ─── CTA BANNER ─── -->
-<div class="reveal">
+<!-- CTA BANNER -->
+<div class="reveal" style="padding:0">
   <div class="cta-banner" aria-label="Call to action">
     <h2>Ready to Scale Your Business?</h2>
     <p>Book a free 30-minute strategy session with our experts. No sales pitch — just actionable insights tailored to your business.</p>
@@ -1032,407 +469,144 @@
   </div>
 </div>
 
-<!-- ─── TESTIMONIALS ─── -->
-<section id="testimonials" aria-label="Client testimonials" style="padding-top:80px;">
+<!-- TESTIMONIALS -->
+<section id="testimonials" aria-label="Testimonials" style="padding-top:80px;">
   <div class="reveal">
     <p class="section-tag">Client Stories</p>
-    <h2 class="section-title">What Our <span class="grad">Clients Say</span></h2>
+    <h2 class="section-title">What Our <span class="accent">Clients Say</span></h2>
     <p class="section-sub">Don't take our word for it — hear directly from the businesses we've helped grow.</p>
   </div>
   <div class="testi-grid">
-    <article class="testi-card reveal">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">"ActiveRetail transformed our Google Ads from a money pit into our #1 revenue channel. ROAS went from 1.8x to 6.2x in just three months. Their team understands Pakistani e-commerce like no one else."</p>
-      <div class="testi-author">
-        <div class="testi-avatar" aria-hidden="true">AK</div>
-        <div>
-          <div class="testi-name">Ahmed Khan</div>
-          <div class="testi-role">CEO, ShopGo PK</div>
-        </div>
-      </div>
-    </article>
-    <article class="testi-card reveal" style="transition-delay:0.1s">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">"The OMS they built for us handles 8,000+ orders daily without a glitch. Automated courier dispatch alone saves us 6 hours of manual work every single day. Absolutely game-changing."</p>
-      <div class="testi-author">
-        <div class="testi-avatar" aria-hidden="true">SM</div>
-        <div>
-          <div class="testi-name">Sara Malik</div>
-          <div class="testi-role">Operations Head, RetailMax</div>
-        </div>
-      </div>
-    </article>
-    <article class="testi-card reveal" style="transition-delay:0.2s">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">"Our Shopify store went from zero to Rs. 2M monthly in 8 months after the team at ActiveRetail revamped it. The Facebook Ads campaigns they run are consistently profitable — best agency decision we've made."</p>
-      <div class="testi-author">
-        <div class="testi-avatar" aria-hidden="true">BI</div>
-        <div>
-          <div class="testi-name">Bilal Iftikhar</div>
-          <div class="testi-role">Founder, NovaMart</div>
-        </div>
-      </div>
-    </article>
-    <article class="testi-card reveal" style="transition-delay:0.3s">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">"Professional, responsive, and genuinely invested in our success. The WordPress site they built ranks on page one for all our target keywords and our lead volume has tripled since launch."</p>
-      <div class="testi-author">
-        <div class="testi-avatar" aria-hidden="true">FR</div>
-        <div>
-          <div class="testi-name">Fatima Rizvi</div>
-          <div class="testi-role">Marketing Director, TechStore PK</div>
-        </div>
-      </div>
-    </article>
-    <article class="testi-card reveal" style="transition-delay:0.4s">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">"The POS system they deployed across our 25 branches is rock-solid. Real-time inventory tracking and daily P&L reports have completely changed how we manage the business. Highly recommended."</p>
-      <div class="testi-author">
-        <div class="testi-avatar" aria-hidden="true">MH</div>
-        <div>
-          <div class="testi-name">Muhammad Hassan</div>
-          <div class="testi-role">COO, BrandHouse Retail</div>
-        </div>
-      </div>
-    </article>
-    <article class="testi-card reveal" style="transition-delay:0.5s">
-      <div class="stars">★★★★★</div>
-      <p class="testi-text">"We came to them for a landing page and ended up signing a full digital marketing retainer. Their strategy is meticulous, communication is excellent, and the results back up every promise they made."</p>
-      <div class="testi-author">
-        <div class="testi-avatar" aria-hidden="true">ZA</div>
-        <div>
-          <div class="testi-name">Zara Ahmed</div>
-          <div class="testi-role">CEO, GrowthCo Pakistan</div>
-        </div>
-      </div>
-    </article>
+    <article class="testi-card reveal"><div class="stars">★★★★★</div><p class="testi-text">"ActiveRetail transformed our Google Ads from a money pit into our #1 revenue channel. ROAS went from 1.8x to 6.2x in three months. Their team understands Pakistani e-commerce like no one else."</p><div class="testi-author"><div class="testi-avatar">AK</div><div><div class="testi-name">Ahmed Khan</div><div class="testi-role">CEO, ShopGo PK</div></div></div></article>
+    <article class="testi-card reveal" style="transition-delay:.1s"><div class="stars">★★★★★</div><p class="testi-text">"The OMS they built handles 8,000+ orders daily without a glitch. Automated courier dispatch alone saves 6 hours of manual work every day. Absolutely game-changing for our operations."</p><div class="testi-author"><div class="testi-avatar">SM</div><div><div class="testi-name">Sara Malik</div><div class="testi-role">Operations Head, RetailMax</div></div></div></article>
+    <article class="testi-card reveal" style="transition-delay:.2s"><div class="stars">★★★★★</div><p class="testi-text">"Our Shopify store went from zero to Rs.2M monthly in 8 months. The Facebook Ads campaigns are consistently profitable. Best agency decision we've made."</p><div class="testi-author"><div class="testi-avatar">BI</div><div><div class="testi-name">Bilal Iftikhar</div><div class="testi-role">Founder, NovaMart</div></div></div></article>
+    <article class="testi-card reveal" style="transition-delay:.3s"><div class="stars">★★★★★</div><p class="testi-text">"Professional, responsive, and genuinely invested in our success. The WordPress site ranks on page one for all target keywords and our lead volume has tripled since launch."</p><div class="testi-author"><div class="testi-avatar">FR</div><div><div class="testi-name">Fatima Rizvi</div><div class="testi-role">Marketing Director, TechStore PK</div></div></div></article>
+    <article class="testi-card reveal" style="transition-delay:.4s"><div class="stars">★★★★★</div><p class="testi-text">"The POS system across our 25 branches is rock-solid. Real-time inventory and daily P&amp;L reports completely changed how we manage the business. Highly recommended."</p><div class="testi-author"><div class="testi-avatar">MH</div><div><div class="testi-name">Muhammad Hassan</div><div class="testi-role">COO, BrandHouse Retail</div></div></div></article>
+    <article class="testi-card reveal" style="transition-delay:.5s"><div class="stars">★★★★★</div><p class="testi-text">"We came for a landing page and ended up signing a full marketing retainer. Their strategy is meticulous, communication is excellent, and results back up every promise made."</p><div class="testi-author"><div class="testi-avatar">ZA</div><div><div class="testi-name">Zara Ahmed</div><div class="testi-role">CEO, GrowthCo Pakistan</div></div></div></article>
   </div>
 </section>
 
-<!-- ─── FAQ ─── -->
-<section id="faq" aria-label="Frequently asked questions">
+<!-- FAQ -->
+<section id="faq" aria-label="FAQ">
   <div class="reveal">
     <p class="section-tag">FAQ</p>
-    <h2 class="section-title">Frequently Asked <span class="grad">Questions</span></h2>
+    <h2 class="section-title">Frequently Asked <span class="accent">Questions</span></h2>
   </div>
   <div class="faq-list" role="list">
-
-    <div class="faq-item reveal" role="listitem">
-      <button class="faq-q" aria-expanded="false">
-        What is your minimum project budget?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-a">Our project budgets vary depending on the scope. Website development starts from Rs. 35,000, Google Ads management from Rs. 15,000/month, and custom software from Rs. 100,000. We offer flexible packages for startups and enterprises alike. Book a free consultation and we'll tailor a package that fits your goals and budget.</div>
-    </div>
-
-    <div class="faq-item reveal" role="listitem" style="transition-delay:0.05s">
-      <button class="faq-q" aria-expanded="false">
-        How long does a website development project take?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-a">Typical timelines: Landing pages take 5–7 business days. WordPress & Shopify sites take 2–4 weeks. Custom web applications take 6–12 weeks depending on complexity. We provide a detailed project timeline during the discovery phase so you always know what to expect.</div>
-    </div>
-
-    <div class="faq-item reveal" role="listitem" style="transition-delay:0.1s">
-      <button class="faq-q" aria-expanded="false">
-        Do you manage Google Ads for Pakistani businesses?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-a">Absolutely. We specialize in Google Ads for Pakistani e-commerce brands, service businesses, and lead generation campaigns. Our certified Google Ads managers have experience with both local PKR campaigns and international USD campaigns, across Search, Display, Shopping, and YouTube formats.</div>
-    </div>
-
-    <div class="faq-item reveal" role="listitem" style="transition-delay:0.15s">
-      <button class="faq-q" aria-expanded="false">
-        Can you integrate your OMS with Shopify and local couriers?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-a">Yes — our OMS solutions natively integrate with Shopify, WooCommerce, TikTok Shop, and all major Pakistani couriers including TCS, Leopards, M&P, Blue-Ex, and Trax. We also support WhatsApp order confirmation automation and custom courier reconciliation reports.</div>
-    </div>
-
-    <div class="faq-item reveal" role="listitem" style="transition-delay:0.2s">
-      <button class="faq-q" aria-expanded="false">
-        Do you offer ongoing support after project launch?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-a">All project deliveries include a 30-day free support period. After that, we offer affordable monthly maintenance and support retainers. For digital marketing clients, ongoing management, reporting, and optimization are included in your monthly retainer fee.</div>
-    </div>
-
-    <div class="faq-item reveal" role="listitem" style="transition-delay:0.25s">
-      <button class="faq-q" aria-expanded="false">
-        What makes ActiveRetail different from other agencies?
-        <span class="faq-icon" aria-hidden="true">+</span>
-      </button>
-      <div class="faq-a">Three things: First, we have both technical and marketing expertise in-house — most agencies outsource one or the other. Second, we're specialists in the Pakistani market with deep knowledge of local couriers, payment gateways, and consumer behavior. Third, we're obsessively focused on measurable outcomes — every campaign and project is tied to real business metrics, not vanity statistics.</div>
-    </div>
-
+    <div class="faq-item reveal"><button class="faq-q" aria-expanded="false">What is your minimum project budget? <span class="faq-icon">+</span></button><div class="faq-a">Our budgets vary by scope. Website development starts from Rs. 35,000, Google Ads management from Rs. 15,000/month, and custom software from Rs. 100,000. We offer flexible packages for startups and enterprises. Book a free consultation and we'll tailor a package to your goals and budget.</div></div>
+    <div class="faq-item reveal" style="transition-delay:.05s"><button class="faq-q" aria-expanded="false">How long does website development take? <span class="faq-icon">+</span></button><div class="faq-a">Typical timelines: Landing pages 5–7 business days. WordPress & Shopify sites 2–4 weeks. Custom web applications 6–12 weeks depending on complexity. We provide a detailed timeline during the discovery phase so you always know what to expect.</div></div>
+    <div class="faq-item reveal" style="transition-delay:.1s"><button class="faq-q" aria-expanded="false">Do you manage Google Ads for Pakistani businesses? <span class="faq-icon">+</span></button><div class="faq-a">Absolutely. We specialize in Google Ads for Pakistani e-commerce brands, service businesses, and lead generation. Our certified managers handle both local PKR campaigns and international USD campaigns across Search, Display, Shopping, and YouTube.</div></div>
+    <div class="faq-item reveal" style="transition-delay:.15s"><button class="faq-q" aria-expanded="false">Can your OMS integrate with Shopify and local couriers? <span class="faq-icon">+</span></button><div class="faq-a">Yes — our OMS natively integrates with Shopify, WooCommerce, TikTok Shop, and all major Pakistani couriers including TCS, Leopards, M&P, Blue-Ex, and Trax. We also support WhatsApp automation and custom courier reconciliation reports.</div></div>
+    <div class="faq-item reveal" style="transition-delay:.2s"><button class="faq-q" aria-expanded="false">Do you offer ongoing support after launch? <span class="faq-icon">+</span></button><div class="faq-a">All deliveries include 30-day free support. After that, we offer affordable monthly maintenance retainers. For marketing clients, ongoing management, reporting, and optimization are included in your monthly retainer.</div></div>
+    <div class="faq-item reveal" style="transition-delay:.25s"><button class="faq-q" aria-expanded="false">What makes ActiveRetail different from other agencies? <span class="faq-icon">+</span></button><div class="faq-a">Three things: In-house technical and marketing expertise. Deep knowledge of the Pakistani market — local couriers, payment gateways, and consumer behavior. And an obsessive focus on measurable outcomes — every campaign is tied to real business metrics, not vanity stats.</div></div>
   </div>
 </section>
 
-<!-- ─── CONTACT ─── -->
-<section id="contact" aria-label="Contact us" style="background:var(--bg-2)">
+<!-- CONTACT -->
+<section id="contact" aria-label="Contact">
   <div class="reveal">
     <p class="section-tag">Get In Touch</p>
-    <h2 class="section-title">Let's Build Something <span class="grad">Great Together</span></h2>
-    <p class="section-sub">Tell us about your project and we'll get back to you within 2 hours with a free proposal.</p>
+    <h2 class="section-title">Let's Build Something <span class="accent">Great Together</span></h2>
+    <p class="section-sub">Tell us about your project and we'll get back within 2 hours with a free proposal.</p>
   </div>
   <div class="contact-inner">
     <div class="contact-info reveal">
       <h3>Contact Information</h3>
-
-      <div class="contact-detail">
-        <div class="contact-icon" aria-hidden="true">📍</div>
-        <div>
-          <strong>Office Address</strong>
-          Karachi, Sindh, Pakistan
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon" aria-hidden="true">📞</div>
-        <div>
-          <strong>Phone / WhatsApp</strong>
-          <a href="tel:+923149959870" style="color:var(--accent)">+92 314 9959870 - 92 318 2764418</a>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon" aria-hidden="true">✉️</div>
-        <div>
-          <strong>Email</strong>
-          <a href="mailto:activeretail022@gmail.com" style="color:var(--accent)">activeretail022@gmail.com</a>
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon" aria-hidden="true">🕐</div>
-        <div>
-          <strong>Working Hours</strong>
-          Mon – Sat: 9:00 AM – 7:00 PM PKT
-        </div>
-      </div>
-
-      <div class="social-row" aria-label="Social media links">
+      <div class="contact-detail"><div class="c-icon">📍</div><div><strong>Office Address</strong><span>Support Office 825 Gul Tijarah Mall Saddar Karachi</span></div></div>
+      <div class="contact-detail"><div class="c-icon">📞</div><div><strong>Phone / WhatsApp</strong><span><a href="tel:+923149959870" style="color:var(--secondary-dark)">+92 314 9959870 - 92 318 2764418</a></span></div></div>
+      <div class="contact-detail"><div class="c-icon">✉️</div><div><strong>Email</strong><span><a href="mailto:activeretail022@gmail.com" style="color:var(--secondary-dark)">activeretail022@gmail.com</a></span></div></div>
+      <div class="contact-detail"><div class="c-icon">🕐</div><div><strong>Working Hours</strong><span>Mon – Sat: 9:00 AM – 7:00 PM PKT</span></div></div>
+      <div class="social-row" aria-label="Social links">
         <a href="#" class="social-btn" aria-label="Facebook">f</a>
         <a href="#" class="social-btn" aria-label="Instagram">ig</a>
         <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
-        <a href="#" class="social-btn" aria-label="Twitter/X">𝕏</a>
+        <a href="#" class="social-btn" aria-label="Twitter">𝕏</a>
       </div>
     </div>
-
-    <div class="contact-form reveal" style="transition-delay:0.15s">
+    <div class="reveal" style="transition-delay:.15s">
       <form id="contact-form" novalidate aria-label="Contact form">
         <div class="form-row">
-          <div class="form-group">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstName" placeholder="Ahmed" required autocomplete="given-name" />
-          </div>
-          <div class="form-group">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastName" placeholder="Khan" required autocomplete="family-name" />
-          </div>
+          <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="firstName" placeholder="Ahmed" required autocomplete="given-name"/></div>
+          <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="lastName" placeholder="Khan" required autocomplete="family-name"/></div>
         </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="ahmed@yourcompany.com" required autocomplete="email" />
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone / WhatsApp</label>
-          <input type="tel" id="phone" name="phone" placeholder="+92 300 0000000" autocomplete="tel" />
-        </div>
+        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="ahmed@yourcompany.com" required autocomplete="email"/></div>
+        <div class="form-group"><label for="phone">Phone / WhatsApp</label><input type="tel" id="phone" name="phone" placeholder="+92 300 0000000" autocomplete="tel"/></div>
         <div class="form-group">
           <label for="service">Service Interested In</label>
           <select id="service" name="service">
             <option value="">Select a service...</option>
-            <option>Google Ads Management</option>
-            <option>Facebook & Instagram Ads</option>
-            <option>OMS / POS Software</option>
-            <option>E-commerce Website Development</option>
-            <option>WordPress Development</option>
-            <option>Shopify Store Development</option>
-            <option>Custom Website Development</option>
-            <option>Business Automation</option>
-            <option>Landing Page Design</option>
-            <option>Digital Marketing Solutions</option>
+            <option>Google Ads Management</option><option>Facebook & Instagram Ads</option>
+            <option>OMS / POS Software</option><option>E-commerce Development</option>
+            <option>WordPress Development</option><option>Shopify Store Development</option>
+            <option>Custom Website Development</option><option>Business Automation</option>
+            <option>Landing Page Design</option><option>Digital Marketing Solutions</option>
             <option>Multiple Services</option>
           </select>
         </div>
-        <div class="form-group">
-          <label for="message">Tell Us About Your Project</label>
-          <textarea id="message" name="message" placeholder="Describe your project, goals, timeline, and any specific requirements..."></textarea>
-        </div>
-        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;display:flex;align-items:center;gap:0.5rem;" id="submit-btn">
-          Send Message →
-        </button>
-        <p id="form-success" style="display:none;margin-top:1rem;color:#4ade80;text-align:center;font-weight:600;">✓ Message sent! We'll reply within 2 hours.</p>
+        <div class="form-group"><label for="message">Tell Us About Your Project</label><textarea id="message" name="message" placeholder="Describe your project, goals, timeline, and any specific requirements..."></textarea></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;" id="submit-btn">Send Message →</button>
+        <p id="form-success" style="display:none;margin-top:1rem;color:#059669;text-align:center;font-weight:700;">✓ Message sent! We'll reply within 2 hours.</p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<!-- FOOTER -->
 <footer role="contentinfo">
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="#home" class="nav-logo">Active<span>Retail</span></a>
+      <div class="footer-logo">Active<span class="teal">Retail</span></div>
       <p>Pakistan's premier software house and digital marketing agency. We build, market, and scale businesses with technology and performance-driven strategies.</p>
-      <div class="social-row" style="margin-top:1.5rem;" aria-label="Social media links">
-        <a href="#" class="social-btn" aria-label="Facebook">f</a>
-        <a href="#" class="social-btn" aria-label="Instagram">ig</a>
-        <a href="#" class="social-btn" aria-label="LinkedIn">in</a>
-        <a href="#" class="social-btn" aria-label="Twitter/X">𝕏</a>
+      <div class="social-row" style="margin-top:1.5rem;">
+        <a href="#" class="social-btn" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff;" aria-label="Facebook">f</a>
+        <a href="#" class="social-btn" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff;" aria-label="Instagram">ig</a>
+        <a href="#" class="social-btn" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff;" aria-label="LinkedIn">in</a>
+        <a href="#" class="social-btn" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.15);color:#fff;" aria-label="Twitter">𝕏</a>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Our Work</a></li>
-        <li><a href="#process">How We Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#services">Google Ads Management</a></li>
-        <li><a href="#services">Facebook & Instagram Ads</a></li>
-        <li><a href="#services">Shopify Development</a></li>
-        <li><a href="#services">WordPress Development</a></li>
-        <li><a href="#services">OMS / POS Software</a></li>
-        <li><a href="#services">E-commerce Solutions</a></li>
-        <li><a href="#services">Business Automation</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li>Karachi, Sindh, Pakistan</li>
-        <li><a href="tel:+923149959870">+92 314 9959870 - 92 318 2764418</a></li>
-        <li><a href="mailto:activeretail022@gmail.com">activeretail022@gmail.com</a></li>
-        <li>Mon–Sat: 9AM – 7PM PKT</li>
-      </ul>
-      <div style="margin-top:1.5rem;">
-        <a href="https://wa.me/923000000000" style="display:inline-flex;align-items:center;gap:0.5rem;background:#25d366;color:#fff;padding:0.6rem 1.2rem;border-radius:8px;font-size:0.85rem;font-weight:600;">
-          💬 Chat on WhatsApp
-        </a>
-      </div>
-    </div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#portfolio">Our Work</a></li><li><a href="#contact">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="#services">Google Ads</a></li><li><a href="#services">Facebook Ads</a></li><li><a href="#services">Shopify Development</a></li><li><a href="#services">WordPress Development</a></li><li><a href="#services">OMS / POS Software</a></li><li><a href="#services">E-commerce Solutions</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li>Karachi, Sindh, Pakistan</li><li><a href="tel:++92 314 9959870">+92 314 9959870 - 92 318 2764418</a></li><li><a href="mailto:activeretail022@gmail.com">activeretail022@gmail.com</a></li><li>Mon–Sat: 9AM – 7PM PKT</li></ul><div style="margin-top:1.5rem;"><a href="https://wa.me/923000000000" style="display:inline-flex;align-items:center;gap:.5rem;background:#25d366;color:#fff;padding:.6rem 1.2rem;border-radius:8px;font-size:.82rem;font-weight:700;">💬 WhatsApp Us</a></div></div>
   </div>
-  <div class="footer-bottom">
-    <p>© 2025 ActiveRetail. All rights reserved.</p>
-    <p>Software & Agency Solutions | Karachi, Pakistan</p>
-  </div>
+  <div class="footer-bottom"><p>© 2025 ActiveRetail. All rights reserved.</p><p>Software & Agency Solutions | Karachi, Pakistan</p></div>
 </footer>
 
-<!-- ─── FLOATING WHATSAPP ─── -->
-<a href="https://wa.me/923149959870?text=Hello%20ActiveRetail%2C%20I%27d%20like%20to%20discuss%20a%20project." class="whatsapp-float" aria-label="Chat with us on WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
-
-<!-- ─── MOBILE STICKY CTA ─── -->
-<div class="mobile-sticky-cta" role="complementary" aria-label="Mobile call to action">
-  <a href="#contact">🚀 Get Free Proposal Today</a>
-</div>
+<a href="https://wa.me/+923149959870?text=Hello%20ActiveRetail%2C%20I%27d%20like%20to%20discuss%20a%20project." class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
+<div class="mobile-sticky-cta" role="complementary"><a href="#contact">🚀 Get Free Proposal Today</a></div>
 
 <script>
-  // ─── NAVBAR SCROLL ───
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  }, { passive: true });
-
-  // ─── HAMBURGER ───
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobile-menu');
-
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', isOpen);
-    const spans = hamburger.querySelectorAll('span');
-    if (isOpen) {
-      spans[0].style.cssText = 'transform:rotate(45deg) translate(5px,5px)';
-      spans[1].style.cssText = 'opacity:0';
-      spans[2].style.cssText = 'transform:rotate(-45deg) translate(5px,-5px)';
-    } else {
-      spans.forEach(s => s.style.cssText = '');
-    }
+  const navbar=document.getElementById('navbar');
+  window.addEventListener('scroll',()=>{navbar.classList.toggle('scrolled',window.scrollY>50);},{passive:true});
+  const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobile-menu');
+  hamburger.addEventListener('click',()=>{
+    const isOpen=mobileMenu.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded',isOpen);
+    const s=hamburger.querySelectorAll('span');
+    if(isOpen){s[0].style.cssText='transform:rotate(45deg) translate(5px,5px)';s[1].style.cssText='opacity:0';s[2].style.cssText='transform:rotate(-45deg) translate(5px,-5px)';}
+    else{s.forEach(x=>x.style.cssText='');}
   });
-
-  function closeMobileMenu() {
-    mobileMenu.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', false);
-    hamburger.querySelectorAll('span').forEach(s => s.style.cssText = '');
-  }
-
-  // ─── REVEAL ON SCROLL ───
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  revealEls.forEach(el => observer.observe(el));
-
-  // ─── COUNTER ANIMATION ───
-  function animateCounter(el) {
-    const target = parseInt(el.dataset.target);
-    const duration = 2000;
-    const step = target / (duration / 16);
-    let current = 0;
-    const timer = setInterval(() => {
-      current = Math.min(current + step, target);
-      el.textContent = Math.floor(current);
-      if (current >= target) clearInterval(timer);
-    }, 16);
-  }
-
-  const counterObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.querySelectorAll('.count-up').forEach(animateCounter);
-        counterObs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  const heroStats = document.querySelector('.hero-stats');
-  if (heroStats) counterObs.observe(heroStats);
-
-  // ─── FAQ ACCORDION ───
-  document.querySelectorAll('.faq-q').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.faq-item');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(i => {
-        i.classList.remove('open');
-        i.querySelector('.faq-q').setAttribute('aria-expanded', false);
-      });
-      if (!isOpen) {
-        item.classList.add('open');
-        btn.setAttribute('aria-expanded', true);
-      }
+  function closeMobileMenu(){mobileMenu.classList.remove('open');hamburger.setAttribute('aria-expanded',false);hamburger.querySelectorAll('span').forEach(s=>s.style.cssText='');}
+  const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  function animateCounter(el){const t=parseInt(el.dataset.target);let c=0;const s=t/80;const i=setInterval(()=>{c=Math.min(c+s,t);el.textContent=Math.floor(c);if(c>=t)clearInterval(i);},20);}
+  const hs=document.querySelector('.hero-stats');
+  if(hs){new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.count-up').forEach(animateCounter);});},{threshold:.5}).observe(hs);}
+  document.querySelectorAll('.faq-q').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const item=btn.closest('.faq-item'),isOpen=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded',false);});
+      if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded',true);}
     });
   });
-
-  // ─── CONTACT FORM ───
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const btn = document.getElementById('submit-btn');
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.style.display = 'none';
-      document.getElementById('form-success').style.display = 'block';
-    }, 1200);
+  document.getElementById('contact-form').addEventListener('submit',function(e){
+    e.preventDefault();const btn=document.getElementById('submit-btn');
+    btn.textContent='Sending...';btn.disabled=true;
+    setTimeout(()=>{btn.style.display='none';document.getElementById('form-success').style.display='block';},1200);
   });
-
-  // ─── SMOOTH SCROLL for anchor links ───
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+  document.querySelectorAll('a[href^="#"]').forEach(link=>{
+    link.addEventListener('click',e=>{
+      const t=document.querySelector(link.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
     });
   });
 </script>
